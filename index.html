@@ -1,0 +1,424 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .writing{
+        position: absolute;
+        top: 700px;
+        right:550px;
+    }
+    
+    .picture{
+        position: absolute;
+        top: -90px;
+        right:-580px;
+        
+    }
+    
+   .footer1 {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: royalblue;
+   color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+}
+.footer2 {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: royalblue;
+   color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    left: 300px;
+}
+/*Feedback Popup*/
+
+/* Popup container */
+.popup1 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+    font-family: sans-serif;
+    background-color: darkgreen;
+    color:ghostwhite;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* The actual popup (appears on top) */
+.popup1 .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup1 .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup1 .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+
+/* Popup container */
+.popup2 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+    font-family: sans-serif;
+    background-color: skyblue;
+    color:ghostwhite;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* The actual popup (appears on top) */
+.popup2 .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup2 .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup2 .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+    
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+    
+    body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://media.treehugger.com/assets/images/2019/05/ocean.jpg.860x0_q70_crop-scale.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+    
+
+
+</style>
+</head>
+<body>
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">Sdg 14</h1>
+  </div>
+</div>
+
+<center>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALoAAAEPCAMAAADCoC6xAAAAdVBMVEX///8Kl9kAkdcAldgAktgpndsAjNYAjtZVrODU5/YJmNmv1e8AjdYAitUnnNtms+Ly9/yQxun4/P7b7PjA3vJ9vebH4fPq9PuIwuji8Pmfzey72/FzuOSo0e3m8vo/pd5qtOMAhNNbr+FMqN6Zyes2otx5ueWGFS2BAAAab0lEQVR4nO1de4OqLBNHIMlbpeZds83c7/8RX2ZQs9LSLrtn36f545zWAn7CMDcGIORDH/rQh95M5eIPUXkGfcX4nyG2uoD+k2P8HF1C57+E4wHiH+i/QIPQ/VCRLz/L/wx4FnVPgMKjm/q9nxpnZZ6lpknV+qb/jVe4bnYL+lpQIDuQn3VKNXi21eGRYFhpKeQMt/fyU27j4xXZN2Xy55GntliqT5FDnX5fGNAu1TY3oNtU0zSqfxOSCE0THkCnGqOUMfhjzTUquCYsQgKmcQndJPumzPPQQ1tjB/XRlQ31oTMmMWg8H4ceJT7VaJJEhGQSEDUQOquiUMK3yMbWaEgsDg0EjLu7JEmaMj6UeY582VktdMbOoPuCLUlIG6k4Mk09odH2vTVeKOhLRJpCYVBklC3wQdEWFpp4FreknPMW+hb6rQc9pPwooTFtEvSlfHEWdNBjLqHLj4d3Qj/yBvryotdDQY9kMxU6YwfG6ivoMI2q6vAO6Ouk6RoSCVaxM4ZZLi14Ogl6JHixYvQEnZ2gI70euifnl4J+pFXcQj+JSINiV96FHlIarrE44vUWME3PobPvLDNeCJ100DVqNdA3C5u183/JeDwFesrpzuXcUsKRC8a4p6BncRy7KBwZFcE7oIdUyOoRetDNXPmRUW8K9D0TUgrCawJ0CXMfNQMQSO2wUnJd6G+BfuCHFnouoVf4XUw1OyRToJtShkrmqhDvYaUqQujugjUSJvU87w3QN4JuW+iJTXUEnArNvmkIdNClDN0DJI541zHryUki3iMcW+gp56SFTjZbZHVDRxU+BTp0uOsyTeyw16W+5B10783QTZZvNjmjodeDx2ja/XEbeiF5THpSmhw6xCtNiJA0KunN0KU9wIQU4Zp97L7wsclp0KXoWy0Wpib1L0KPOTCQMgTeDd0BQ/QcusQQTIVeMwCTgWJG6D4+jtD8cnkD3U183385dE9W6idSiGcnbSQx5NBYMgG6YCZBjmcNg5uMygleMTB6Vwp6Y/S+Grqi9ZkhoAxvKqqb0KWNL3nLQZsf/thsHSjh6vBvxCinpqWbPVdDkvyZR15Amd66GuQg+q6GcnfuQCeGIZX7xjCS5g9PfvbxCcpX61jAk5Mv2JV5AammkHzZ8umLKGzdyVvQ/wB9oP8GXUL/w4E7Zv4ZuoL+h+gc+oc+9KEPvY80+odIO4O+kG7JX6G+s/eB/lP0gf4b9IH+G/SB/hv0gd5V9xpU09p6LfQFfw2sKfRa6NSPxYuA3afXQucx2YqfYprXQofAsM9/CPuLeV34EAf+Gewvhs5dWYm3ml+LYrNZL/1q4YhrBKSeK2g4tszzakb7r1ZJQkXGq5nYWUAYFUtS/yJ05BhJy5nYaRoVWzKn018OvatvT2cVY7jwws+f4b+j9dyAzugj7yGSpqo5yolVeexdzBFWAdexRTSGfRw6i8nhAfXCu2XOwp5cmiZGlkHSS356X3aQI8cdPx1jvRu9LiJYMZ0LvcmgAAqnDxul3E5Dp9okJ6C8JsfU2OijLd1gGEgEWM/peMa4oOGptk05ozQL5KuKfR8A29yafremqdjKJ9uJHc+kcGO5lZxVR8K1mDpw7JDQM6uZUQdWGQsxMni3oDNcWPLuczzjVCyCbDjF0SqnoWd1cjYhWeAT2RG7kGTD0v6mcGySrG5xPAPYlRveWqbeudoUrr8Qg2yfc7EiQphFPh86zNSm40dgC7ZOpyxRz2CcXvUgateylfkMo2aqGvXLblM8Yu0mwFbkFYtHRG1hjarlO9pUtPJiU3XDOYVHBskP6Fwtx6rsUei9rwvoNJQj62J2knpw2OL/E+bsxbiP20L3bBjaZYmRqBSiHpMjt+lAWZscsotvGxgsmDow96Cz/sr7fB5pSDIbP+WbbZc3up76gH3c6JoOXaPFJY4HaE2Z3mey6DgqLllgOFwckvt9fxd6k/v7JLn7SxEajtjm0gbauIm3fwX0BXkTDYCTwssBUyKYYnTeh75/E/Lkmp1ZHVg4OnSKj3UXem967S5sq6doyLrgxzDd51IBEHeCArgLXXTT6yjEwn3FtiNJRjkoQjjlUqQxuzbI/X6fLByNFbhb0mgJwmskM8mqx20CnlmQzWg+3+tM7QE6uRygT6vUeDyh0bhtDlCC+vQF01Q5Pel5Y1IOqK6f/QJGfNf+nWzm3IMOGXjG4pIxcV8SiQ42q4I086e9gZflwMsTgT0NXTobmwH31IaoaCCfMzAjqeBlfsyMW9aNcSzHHLU3QaeGOzCjWEyy6uy5fANpCYvFIS62V4NgpEvxyu6eBl0bVA6sGulBfAMqqNYNQHhc0jfAxsYeCtzdM7m7Sqv5ft1kesviY6uBvfKdq2JvgS6Uy7qboFeeoHdAb+q05rvRv7mqgYQRU6l/p4PAyS2nhQmmhoB5/Qqj9wECfhkLO10qJYjl8CouwqTdTeJFRnZcm/fn9xugS79qV40wC8921p63khWsuXwklhNl+zuhj3dAj284ORxsfiMA9EyYd2zobKwH3gX95mRjXDFGVopggu2f3AiS/3hSCStHUF5TCK6BX89fkHkXiamuyk5XPvZxRFT9PPR2efJ+p4vmNcPhfv+HoZOD0wSah0Om/zDDdLQZzjn4+WnaNBi5U3e9GSMS63XQpTaf8iuKpnwUCyna8+y+a+jlY+LxVdAZ3bvFhABE6RHPONYCXhOCC7V7k3828dvlOsWYx2AElIn+6nldsTNnD1ZIyng77NZmB3FjJJ+Azk48yPdY+jAUAV1vXD5Y6Aw+O7hnkYVNCA7tW2wYWJgpS87VviyVwHPe6w1GGsKW4fv1qcjCYrnOv9fLmk/wwx/0TcVSbXkO2CH4rpqAEumrDlapF2GlMbzsOfIGiib99hHodHluqDYDHfcZQ5oqpcL+4vDLU9B7xxD0yerzBSyGzMmGeoAegM6GT2q6sJLY4t3q7QHow0ZIeJm38vZsx0cYhh/S9Br+cNE34n9omkqf8lqHHIe0B+9Sq1//Do8JxyHrbztgVbOA7NRjqr08EPZYrw9NVGNA8fCUeAidGmTyAvpUegj6ALvIXl8N9CsPlIQUHhnPDnmQJkG/0MndYRwX5A6Aa+QMK92xTuGPLhlMgc6z3mBL48WxhqGf2Sr8cvlpBAAtSPSY7poCne78Ux5PmbSnNl1TL7JLi3BSnBdH0J+VRDsLenbqT3rLLSu70mAHjKaFnrUPM3409/Vp6FJ9dmJZbIZRI/UGnhqbaWwAkbwJaRgPQpeD2jkRg8Klpb7up1Oj67QyH5M9k6CbJ3uWD2f2eBCmmuJSDFX/oMCfJBxFTyjTtRtfQz/gCa0PsezDNAk69XsygHH9SsKkmH07wxt6BU2Dnp3xAr2MLlsCzh70frbTJ2rT41l6Cr9QSa5Af24oHvBOmgSd7c+c/fOcqgSzcvjyxqaYviGBR41ftTJZHs2GvjpzmbWzA5MahX9DTpjWskXGRR1bVnq4CFXQbDPfsJxmOQo8r/dUqM7dtCiUp3R/csq5keAGEk7jVi0UZyOxJnBW24uhM9Sj1IjOamY47Lri9LsKRZ0vy5gd9EXTuie0pNmwmz3J7+XDuBgXkvN0gCFoMq3XlQrWzJNgiuBj2tsNU7nzF+XvQU8ROquGELIqIrvjhN5CkdSTqImOdnPRw/5AAsf9Xkd+EINODhNiUjIlv9C/W50G03jtCejSL14MMfs8uoRO3By5/jnL4R70pdI0ktmfCEegzXbtnwykxr4S+kp58sPMPpUwQ7VaXyD3n4yj3hOOAo5e1caYfUYbsZwV235TD6TLDFR7C/rOaAIpc5j9XJLCpokAdnqJqgs9JctBbrkKrd9Q0ncz7rbKaByW7CPE6zMpbSZp4wgxunLDXeQXgykXjNJ6WdOe0GJiNR4ZuptdeoQUeQbzdT0tvMQ16hLvjLt6FgusGw0vtjDapGoYcWufie9dz1WfCx39UibtRj7Nw6deLCD3YrzFERJ5TwQVELZhEH0YimROhc6IS0G4i2iSFJbNrYGhZyJn9CIAGwiGculGF9xPvfcyuiJHTsPNlHnaHKafzRPZDNNRrbgXKTHQerglG+5v7pF+qdj5orFm7hLFM8bneflqT2yo0/5uHO9eF9yHvt0AbM4Dcs+4g6Pl1Wn6x3lpvJgQJi0bfrUbZ3C9YSp0OW5wEcee7+9NPVbteVDZEESs+DGeg13N0HR9lXx3y0CbskMGzqe26JIs2bh1ymBdOnIMkjXzTU7qyT0/vvfplgq/D/1I8IIVUYEhxuoiGGI/uqKcbiNBWxsxFtJgnmz2DGw52yygD3bPTFMMZEjTzy5BJ0GOtHWNHSRwCqylCQzsRSt1r8Hk2crMC16xqEorvLHMMgW6gFBy2UEfkDTtie6p4PDJA8jwrIIU3UlmGxP9JfAQMgSZGQ3203TowOtyQAOEjpH8gegzrxWL5w5Ax8kFL3HQ42iqL0RNS81Wr922xGDX5eM2DEoYsHnTEp0OOBJjKGOH0S8l4WDgUYoKV/YeaJpJBoSGq7F1HuzrXiIyp4fHbRiU6+DTb5cIGThmMNlInG4BAFuTiWbCGocZivU6oeQJo1fOwARve/LXyCigLIcCVfKVojWrsOel9ualihWFj2xjn0j3bRg0u2Tf58gHEOUdWrXiJBOM2VibVL+NMxd9vXGzxn3oqBa45cUY1gCGGbTDKJWTuVFHTnexz+bW3oE3+6ayO8GOkIhTjArCzT1jNpGQfhsu8CGbFytaZrekGzeey5i5a6/XGArgLslUZ4twQGQomcDWTHQXeMAhIdIZ9UYtH7Z6bxwGBDkKlpgYyOKwBgDvcPY7njUpaqw9PasNyjHaJIBd2zOgIh44IGwG9ADrh22E6GthNGgvXb5eh8mROeIOhpWcyM2acCfUFHLNvVrzgH00t2zap6HzhsUDogIyqPJjZm/SDjsXC/nEW0lf0KDNkgd4NwzTBMAO4MvLquWbCWM4EeV10C2vhY4LG3DzH9yURtAExl9sfYNYUUKloRM21xNCTI6bqRFwDc7agDZ68XPcdcTxzCRNXbf4FujSCG+hw5Az04PuB7+xnWMsPyZYUg6Q5ZQmWmiJELjmAUcjuWAibE6zg15tjH8s+HgXOipThA7fISdnFKAbbXt4bMGRgrVjbaUwhInqOeCihlL/iojIMl7POWTVhYGbzDpkbTp032ih43WUeLUbeHztFIOlGZHBxWPoUBvVKS6BG3Nwnejc2GR20G/TnX4+2DzoO2QM9q0cFmWYC03fNMuk/HBM3dIA/gfocFpWe/JXk2wHlxdtnPOdXZy3d5OR5Grj9qugCyUTWdzwNtyIZOBtjzhNWRf0N2xhgcSAFGvV5yiQmjQUP9uexf2Y0zK887Bovw8d1b6U66hDoUc3JoMEU3Q8e06ln2/ALavafYCoDkqu2erP6PusatGG6R7j80nQPdxZI/UH5tuApwEz0m3X1ZkW5IdDuxoa2aeV7DVe0Xl0QNKE64vl6FO64ZNh+1vQVd1SiYKMQP9OSkvdwBtUsQLWeRUEz0rgyz3+LUdJcnQENs31RjqMJx5gyB5MopkOvQmzq0Seo271ewvMmrBaqMNrJIcz5SLLaa2CeHDZ4WWrJUYN2Cp6IitiInQRoYxU+71TuHfmZPUxM4ylm8HwWmI0FBU7lFzHtzHsq1bpFu4uA+ssG97qBY5ee5/52Kvd53XV680sRUwmSMieBmRqHYKhGoIq1O7GpFLxiQGzkeWtCyL2F3EmPFVMaNU6gDSE4hiva1xLuH6BCdOUomDZdwJliza50YNe48bXdXMEyIKeRWwDDteUXvXq9Se15GHu0+2lpbALU+kKXHbAfeEInCFlozKtIZ1kTSX06PRLOXdDKuqTdi/cXpzcc/RJe2TuHuEWWRcLUHe1aQLdK80TxbCgkZawIaav2aV14AFX7wxj4NCSPLy5rNLgFmZ8f1vh7ixdaJr51RhhSquvYblBehunahzs8YNNqdCHUjijmxENwO1OPGapr5LvQseMtcYcwMwWxQ0xXXcBOWV6qw0ydj9x1ssUA3jHeoxjJO7VjAOW+qlxE7wkelqzBqMwRTSB8NoAMgRdkliZ86KfH15IP0JaMDvghEEPGkJ1x3nHWi1PACechVSyJqKhWH2DIhCmqvotmDWhvYZKGct6deFuH+lVhc7CuM44hm2Py2L2WX+9HLS70Bd4mWZTBG/SDEEAAk83LvPClxoJ3hDNhIC38SM1KNLOkigvdhQAez92ktVxOnTZ9JZ2vY5O0g7UPTutOIBGYvsdaiLD5Eyl6bThPSmc1uzsIFgu+HrG8ZvnlM6ALlU17Xi9TUZegG46U4N4iiFTexeUQdvoLFZHXbQFz/E9zD/I8kHoUqjkrM3PaG3VFaj6UTWjjq9sg6rN9kFQOVr+FOy50DXbC2mbn9Eew8rlLB1fSFbbUE5BVUBNq7GtvG+ELpmVt9lrzUXdFoVS4xpS3YvLG1uKL+PsZQf7zYIOuVNUJfU2113vBJ5UPu6aqeBdbdMyT8NX9PWD0OWsC0WNIrKJQWwpduuAj8DU6VkOWrv+a0E/Al2KFVgG46f7kU1wlX3a7iYGh4DiiUCLKoczy25tRflJ6IybpPjyMsG63QKuLhWTI3hdLQ/7PIiPhbU1knd08hPQmWBVnvskj5L1oWyhF1I0WhMP5XsxTYXOJp2c86M0ETo67P8YTYOOAel/jaZBv8wk+ydoEvR2QevfomnQg5HSv0rToO+tf5D2kxy8NnL2T9GMiMA/TB/ov0Ef6L9BH+i/QR/ov0H/P9Cb/JQ/QeL8jnbjTxH50Ic+9JdoUy3/Ep1Bt7n+Z4idHSKx0S93Ef/DZPbv/vpA/yH6b0DfJaPh0+TqKy+aG2vdJBfLwNF4e0iD0DNH2DoLPJLq8gPPYYElpY4jv42+bJsK21l7jtBtW/+SX+11x3Fi17EFte0vZRS5Di6xUpQC4ZdFaqHr7Y52rJ9CiqEJlUAZv3ZkLevwSxdQfUq2mqy0kj+p5W/t1RHXUWSD+uIm9K04xHElFqQQeRwfhEmIpS+sbG1XJIhjXrqx5dny3zgOoO6ysOIgjOMlz+NA9d1CXW9l4tKZoVukZG6cC91S9a/deC3kay00rGTnCREURVAmQZxz2XjoOyzNApsRLBivbJcYgCqOj7eh29DC2g4tzJk7yH/VSTxrvIhPD/Cn7Xqe3SWSFHq7PrqzK0itl9XbSQsdeIDjIvxWh8MQAntLFiv1e0vvtuAZ+HoHGw+8l0BKbFka5+qLOwyjoFt2oaC7dhjpOP4htODh5w56YHeLNml3xWCqJzYkamo1r3vQJZYMocO/hWylhV7oXTBfIRSY+QbNKugalV+cH5d2A3psZxZiqXTfsFPVmcEJ+j5KkmRDKrsrfoJem6SE+Dw7pLLBE/RQP3a9vrdDsjChkoj4Tt2uDSP0jUqaJKJS0DeSaQ39uEt6AmEEumuEKRWkoMv1vqY1CW18442dd9AFl/PoyyU1vYa+cWKSQrI0q4hJvRN0X4ex2Ipqvy8hR3/BZCVOCRlLjmMv/Rb6zv7GiuSYlWy/XjPZdQal0GJ38MYwdPyR6Uvo5gqP+R6Abh+2WZb5pOxWgk/QgdF20MESeqjnySV0Wa2p9p6YUAkyi2EF1N400KMmOx+hr1YMkj0MO4Afd0tzo71uwDQpAAvkMhg2br3wgYEveP1wOjeug76kQRAAl0N21dpORQs9Q8ZDhtHgQcvrTXlgVITuNXPfXiLDbKEbZvA6QjdgbTqTcJeqN60r6K7dJXy10D1hlmW5siOE7lHGW+hrnPc4TWESyF7vN5/pLXT1YjhIyOuQpfgA9A1ogUpKMuKZkPJ1AX2nmzBASQ96ho3Av7j5oaAt9KNAhaIkDGWnXjegoFdCeQU9xuzbSraP0Avg9UnCsT1YtcATA/fOluyEXVcCpa/nKOiQ0kAdyAnXF7WAUUmbW28PmLPpyenHUcbVsitq+XPbZpGqH6DHTkFWqhK/+KL1wsY+CR08fsjUVxUHOaPEgJDC0cYkii5feBC6n7eHAeTYod+QxBtX9R4feznWnQdA0JiRl+UeL0XPlSr9VgMS5yRw2/pc+eO4YS0jhx6JvmMSYyXfu026L8schUeiGveOVX2AHnSxMis3km/8cXca9n/DcvzX6AP9N2h4msYuEMzGbb48xDuYNYdloLZeBMtlbpFYTZcwNkgon3xbnirkwldAMTGa35A4hs3kwWGZv+Im6ZvQt7b0C3SnBhVim9pXSiJqmwsbxNZRtxmzv6RoQ3HBefsk+tKlvNSdJXEoxBq+iCWUURnqUmtZ8ltN/3rhdcC3VVJm1xs8hPcATzam7Xk6nGQB94Zj5sZRKhd91TxplJVnNzmoFlc5emtGt1IB4YVmL8xouw19aStjx7NVdr2eJXYrVy05Bp5UEH735Ao6XVD8e0G3G334XojXQ290h2gcQb+1vlzPqdof11xyjU+i05MW+ncDXRSgu1M7lVaEfn0EzFug0/KwXFY+0RvfrbF5I9mfe5sulVY0nJjuCViG7ZMGulhA6UIOUrKSgM3SkJZirItl0M/Mfxf0VV3XK580vkofupQ5tW1rwLNrqs4FxyfmideFKUsvUgndL5zEcDKALuWQ9O35CxPhbjOM3fBC49+1DgBxced00tuti08uGUbafXacCyliGtemEC/k+NvT1Gyct52OaMLWb4/0PTy1T1se0e++nKbSV87hNK1tC53oZ4Hld0IPRKNDVEA4b7fuhAhaQVc+0vbkP/V6PZRGtnRRO+i+/fZeF3kqyZK+swiyLLakqV9nYWDXxGCulbkcAy4KuqF1T1roJZQ+InRSFOjQRTy2siPTX7hgOBK4s8FRl9LBX4ATboGXB3E0j+xMx9EdE03q5At4fafBEw2eeF9r/BdLS2361Zj92VfmreBX7JUiZtj88hTBx6jdV+c3mnDjG21cs/Gn5ZNGcKgiXenO34YP3qncO6H/CfpA/w26hL7/JRwP0OocuvgnU0qHiZ1D1xZ/iX52lD/0oQ/9F+l/r9zwkPnpJ7oAAAAASUVORK5CYII=" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Sdg 14.2</h1> 
+      <p>PROTECT AND RESTORE ECOSYSTEMS</p> 
+        <p>By 2020, sustainably manage and protect marine and coastal ecosystems to avoid significant adverse impacts, including by strengthening their resilience, and take action for their restoration in order to achieve healthy and productive oceans.</p>
+    </div>
+  </div>
+</div>
+    </center>
+    <div class="writing">
+    <p>Healthy oceans and seas are essential to our existence.They cover 70 percent of our planet and we rely on them for food<br>energy and water. Yet, we have managed to do tremendous damage to these precious resources. We must protect them<br>by eliminating pollution and overfishing and immediately start to responsibly manage and protect all marine life around the<br> world.More than 80 percent of marine pollution comes from land-based activities. From coral bleaching to sea level rise<br> entire marine ecosystems are rapidly changing. Global warming is causing alterations in ocean chemistry and many oceanic<br>processes, and it is threatening many species of marine animals that cannot cope with higher temperatures. Overfishing is a<br>serious problem in many parts of the world. Conservationists advocate creating expansive marine reserves to protect<br> the biodiversity of the oceans.</p>
+  
+    <div class="picture">
+    <center><img src="https://www.businessgreen.com/api/v1/wps/6194bea/1043be24-cc38-4772-999d-32d35cb94ed4/5/fill/SDG14-580x358.jpg" alt="sdg 14"></center>
+
+    </div>
+    </div>
+    
+    
+    
+     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link  rel = "stylesheet" href = "circles.css"/>
+  </head>
+  <body>
+  <div class = "circle-container" style = "display:block;">
+ <ul class="circle-item"> 
+      
+
+     <li><img src="1.png" id="num1"></li>
+
+    
+	  <li><img src="2.png"></li>
+     
+	  <li><img src="3.png"></li>
+     
+	  <li><img src="4.png"></li>
+     
+	  <li><img src="5.png"></li>
+     
+	  <li><img src="6.png"></li>
+     
+	  <li><img src="7.png"></li>
+     
+	  <li><img src="8.png"></li>
+	 </ul>
+    </div> 
+        
+    
+    
+    <div class = "container" style="display:none">
+    <div class = "item">
+     <img src = "4.png" class = "deg3" >
+     <!--img src = "2.png" class = "deg2" >
+     <img src = "3.png" class = "deg3" >
+     <img src = "4.png" class = "deg5" -->
+    </div>
+    </div>
+
+    
+    <div class="footer1">
+        <div class="popup1" onclick="window.location.href = 'http://127.0.0.1:51468/aboutus.html';" >about us <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
+            <span class="popuptext" id="myPopup">Popup text...</span>
+        </div>
+    </div>
+    <div class="footer2">
+        <div class="popup2" onclick="window.location.href = 'http://127.0.0.1:51468/donation.html';">donate <i class="fa fa-globe" style="font-size:24px"></i>
+            <span class="popuptext" id="myPopup2">Popup text...</span>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+        
+$(function() {
+
+    var deg = 0;
+    var rotate = 1;
+    var club_rotate = setInterval(club_rotate, 25);
+    
+    $('.circle-item > li').not(".circle-item > *:nth-of-type(8)").mousedown(function() {
+    
+        rotate = 0
+        
+    });
+    
+    
+     $(".circle-item > *:nth-of-type(1)").mousedown(function() {
+    
+        rotate = 0
+       window.open('https://learnersbucket.com', '_blank');
+        
+    });
+    
+    $(".circle-item > *:nth-of-type(2)").mousedown(function() {
+    
+        rotate = 0
+        window.open('https://learnersbucket.com', '_blank');
+        
+    });
+    
+    
+     $(".circle-item > *:nth-of-type(3)").mousedown(function() {
+    
+        rotate = 0
+       window.open('https://learnersbucket.com', '_blank');
+        
+        
+    });
+    
+     $(".circle-item > *:nth-of-type(4)").mousedown(function() {
+    
+        rotate = 0
+        window.open('https://learnersbucket.com', '_blank');
+        
+    });
+    
+     $(".circle-item > *:nth-of-type(5)").mousedown(function() {
+    
+        rotate = 0
+       window.open('https://learnersbucket.com', '_blank');
+        
+    });
+    
+    
+     $(".circle-item > *:nth-of-type(6)").mousedown(function() {
+    
+        rotate = 0
+        window.open('https://learnersbucket.com', '_blank');
+        
+        
+    });
+    
+     $(".circle-item > *:nth-of-type(7)").mousedown(function() {
+    
+        rotate = 0
+        window.open('https://learnersbucket.com', '_blank');
+        
+    });
+    
+    
+     $(".circle-item > *:nth-of-type(8)").mousedown(function() {
+    
+        rotate = 0
+        window.open('https://learnersbucket.com', '_blank');
+        
+    });
+    
+    
+    
+    $('.circle-item > li').not(".circle-item > *:nth-of-type(8)").mouseleave(function() {
+        rotate = 1
+    });
+    function club_rotate() {
+        if (rotate == 0) {
+            return
+        }
+        deg = get_deg(deg + 1);
+        var deg0 = deg;
+        var $data = $('.circle-item').children().not(".circle-item > *:nth-of-type(8)");
+        var length = 13;
+        if ($(window).width() <= 540) {
+            length = 7
+        }
+        $data.each(function() {
+            $(this).css("-webkit-transform", "rotate(" + deg0 + "deg) translate(" + length + "em) rotate(-" + deg0 + "deg)").css("transform", "rotate(" + deg0 + "deg) translate(" + length + "em) rotate(-" + deg0 + "deg)");
+            deg0 = get_deg(deg0 + 51)
+        })
+    }
+
+    function get_deg(deg0) {
+        if (deg0 > 360)
+            return (deg0 - 360);
+        else return deg0
+    }
+});
+    
+</script>
+
+
+
+
+
