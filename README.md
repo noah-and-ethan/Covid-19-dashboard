@@ -2,6 +2,7 @@
 
 04-26-2020
 - looked over Mr.Hoels code
+- got new data - (https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_daily_reports/04-25-2020.csv)
 - brainstormed desired features
 - decided on country shading
 - found inspo - https://covidlivecount.com/
