@@ -39,6 +39,11 @@ h1 {
 }
 
 #map {
-    width: fill;
+    width: 1000;
     height: 500;
+}
+
+#chart {
+    width: 800;
+    height: 600;
 }
