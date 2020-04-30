@@ -1,0 +1,44 @@
+body {
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 1500px;
+    background-color:black;
+    font-family: "courier new", sans-serif;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color:#a4d2fc;
+}
+
+.active {
+  background-color:darkgray;
+}
+
+h1 {
+    color: black;
+    font-family: "courier new", sans-serif;
+}
+
+#map {
+    width: fill;
+    height: 500;
+}
