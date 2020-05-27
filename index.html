@@ -1,0 +1,96 @@
+<html>
+
+    <head>
+        <link rel='stylesheet' href='https://unpkg.com/leaflet@1.4.0/dist/leaflet.css'/>
+        <script src='cloropleth.geojson'></script>
+        <link rel = 'stylesheet' href = 'unit3.css'>
+        
+        <script src='https://unpkg.com/leaflet@1.4.0/dist/leaflet.js'></script>
+    </head>
+    
+    <body>
+        <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="page2.html">Cases</a></li>
+        <li><a href="page3.html">How to Stop Covid</a></li>
+        </ul>
+        <h1>COVID-19 Recovered (March 23, 2020)</h1>
+        <div id='map' style='width:100%; height:500'></div>
+         <h2>Covid - 19</h2>
+        
+        <div class = "row">
+            <div class = "column">
+                <h3>Welcome to our Covid - 19 dashboard. This dashboard contains basic information on the Covid - 19 pandemic such as information on deaths, recovered, total cases and other info such as ways to prevent the spread. </h3>
+    
+                <h3>Covid - 19 is a deadly and fast spreading virus that originated in Wuhan, China. It attacks your lungs and respitory system and causes the lungs to shut down. This is very deadly as the stoppage of breathing is a very fast way to die, but it also means that the virus can be contracted not only through contect, but through inhaling it or putting your hands near your face.</h3>
+                
+                <h3>Some common sypmtoms include:<br>
+                - fever <br>
+                - dry cough <br>
+                - tiredness <br>
+                Some much more serious symptoms include:<br>
+                - difficulty breathing or shortness of breath <br>
+                - chest pain or pressure <br>
+                - loss of speech or movement <br>
+                </h3>
+                
+                <h3>If you have noticed any of these more sommon symptoms, please take serious action to stay inside and self isolate yourself from anyone. If you notice any of the more serious symptoms, you must immediatly contact local health services and while waiting for them to arrive, self isolate and don't go outside as you are putting everyone at risk.</h3>
+                
+                <h3>Continue to the next page to see Covid - 19 in numbers and the last page for ways top stop the spread!</h3>
+            </div>
+            <div class = 'column'>
+            
+                <img id = "virus" src = "virus.jpg">
+            <br>
+                <h3>About us</h3>
+                <h4>The two people working on this site are Ethan Urbanky and Noah Ho, two grade 9 students. We are amature coders and our client is out teacher, Mr Hoel. This site uses HTML, CSS, JavaScript and Python which are the languages we learned this year. </h4>
+            </div>
+        </div>
+    </body>
+  
+    
+    
+<script>
+        function getColor(d) {
+    return d > 1000 ? '#800026' :
+           d > 500  ? '#BD0026' :
+           d > 200  ? '#E31A1C' :
+           d > 100  ? '#FC4E2A' :
+           d > 50   ? '#FD8D3C' :
+           d > 20   ? '#FEB24C' :
+           d > 10   ? '#FED976' :
+                      '#FFEDA0';
+        
+        }
+        function style(feature) {
+        return{
+                fillColor: getColor(feature.properties.deaths),
+                weight:2,
+                opacity:1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity:0.7
+        };
+            
+           
+            
+        }
+        
+        
+        
+        // Set up the world map
+        map = new L.Map('map');
+        var cartocdn = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
+        cartoAttrib = 'Carto geodatabase is good for this application';
+        carto = new L.TileLayer(cartocdn);
+        map.setView([51.5, 0.12],2); // centered on London lat, long
+        map.addLayer(carto);
+        
+       
+        
+        L.geoJson(countries,{style: style, onEachFeature: function (feature, layer){layer.bindPopup('<h3>Confirmed</h3><h1>'+feature.properties.deaths+'</h1>');}}).addTo(map);
+
+        
+</script>
+
+</html>
